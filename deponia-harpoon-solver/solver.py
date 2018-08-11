@@ -2,7 +2,7 @@ import model.vertex as vertex
 import model.movement as movement
 import model.grid_limit as grid_limit
 import algorithm.graph_generator as graph_generator
-import algorithm.dijsktra as dijsktra
+import algorithm.dijkstra as dijkstra
 
 if __name__ == "__main__":
     start = vertex.Vertex(4, 1)
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     generator = graph_generator.GraphGenerator(movements, limit)
     graph = generator.generate()
 
-    d = dijsktra.Dijkstra()
+    d = dijkstra.Dijkstra()
     solution = d.solve(graph.edges, start.name, end.name)
     # print str(solution[0])
     # print str(solution[1])
